@@ -67,6 +67,7 @@ subprojects { project ->
         //} else {
         //    println "Exists: $generatedDir"
         //}
+        generatedDir.mkdirs()
 
         // gradle-jaxb-plugin configuration
         jaxb {
