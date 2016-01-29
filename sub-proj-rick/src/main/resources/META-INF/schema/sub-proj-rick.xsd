@@ -1,0 +1,14 @@
+<xsd:schema targetNamespace="http://docs.openrepose.org/jaxbTest1/rick/v1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:complexType name="helloRickReqType">
+        <xsd:sequence>
+            <xsd:element name="request" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="helloRickResType">
+        <xsd:sequence>
+            <xsd:element name="response" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
