@@ -1,38 +1,41 @@
 group 'com.thescheideggers'
-version '0.1-SNAPSHOT'
+version '0.0.0-SNAPSHOT'
 
 buildscript {
     //********************************************************************************
     // uncomment for local testing
     //--------------------------------------------------------------------------------
-    repositories {
-        flatDir { dirs '../gradle-jaxb-plugin/build/libs' }       // gradle unversionedJar
-        //flatDir { dirs "/${gradle.gradleHomeDir}/lib/plugins" } // gradle installPlugin
-        mavenCentral()
-        jcenter()
-    }
-
-    dependencies {
-        classpath ':gradle-jaxb-plugin'
-        classpath 'com.google.inject:guice:3.0'
-        classpath 'com.google.inject.extensions:guice-assistedinject:3.0'
-    }
+    //repositories {
+    //    flatDir { dirs '../gradle-jaxb-plugin/build/libs' }       // gradle unversionedJar
+    //    //flatDir { dirs "/${gradle.gradleHomeDir}/lib/plugins" } // gradle installPlugin
+    //    jcenter()
+    //    mavenCentral()
+    //}
+    //
+    //dependencies {
+    //    classpath ':gradle-jaxb-plugin'
+    //    classpath 'com.google.inject:guice:3.0'
+    //    classpath 'com.google.inject.extensions:guice-assistedinject:3.0'
+    //}
     //********************************************************************************
 
     //********************************************************************************
     // use artifacts from bintray
     //--------------------------------------------------------------------------------
-    //repositories {
-    //  jcenter()
-    //  mavenCentral()
-    //}
-    //
-    //dependencies {
-    //  // https://github.com/jacobono/gradle-jaxb-plugin
-    //  classpath 'com.github.jacobono:gradle-jaxb-plugin:1.3.6'
-    //  // https://github.com/rackerlabs/gradle-jaxb-plugin
-    //  //classpath 'org.openrepose:gradle-jaxb-plugin:2.0'
-    //}
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://maven.research.rackspacecloud.com/content/repositories/public/"
+        }
+    }
+
+    dependencies {
+        // https://github.com/jacobono/gradle-jaxb-plugin
+        //classpath 'com.github.jacobono:gradle-jaxb-plugin:1.3.6'
+        // https://github.com/rackerlabs/gradle-jaxb-plugin
+        classpath 'org.openrepose:gradle-jaxb-plugin:2.0.2'
+    }
     //********************************************************************************
 }
 
