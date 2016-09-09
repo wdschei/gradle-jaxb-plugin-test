@@ -26,7 +26,8 @@ buildscript {
         jcenter()
         mavenCentral()
         maven {
-            url "https://maven.research.rackspacecloud.com/content/repositories/public/"
+            //url "https://maven.research.rackspacecloud.com/content/repositories/public/"
+            url "https://plugins.gradle.org/m2/"
         }
     }
 
@@ -34,7 +35,8 @@ buildscript {
         // https://github.com/jacobono/gradle-jaxb-plugin
         //classpath 'com.github.jacobono:gradle-jaxb-plugin:1.3.6'
         // https://github.com/rackerlabs/gradle-jaxb-plugin
-        classpath 'org.openrepose:gradle-jaxb-plugin:2.0.2'
+        //classpath 'org.openrepose:gradle-jaxb-plugin:2.0.2'
+        classpath "gradle.plugin.org.openrepose:gradle-jaxb-plugin:2.2.3"
     }
     //********************************************************************************
 }
